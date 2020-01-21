@@ -1,0 +1,13 @@
+input.ng-valid {
+  border-left: 5px solid green;
+}
+
+input.ng-invalid.ng-dirty,
+input.ng-invalid.ng-touched {
+  border-left: 5px solid red;
+}
+
+input.ng-valid ~ .valid-feedback,
+input.ng-invalid ~ .invalid-feedback {
+  display: block;
+}

@@ -1,0 +1,95 @@
+<div class="country-edit">
+    <h1>{{title}}</h1>
+
+    <p *ngIf="this.id && !country"><em>Loading...</em></p>
+
+    <div class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+     
+        <div class="form-group">
+            <label for="name">Country name:</label>
+            <br />
+            <input type="text" id="name"
+                formControlName="name" required
+                placeholder="Country name..."
+                class="form-control"
+                />
+
+            <div *ngIf="form.get('name').invalid &&
+                 (form.get('name').dirty || form.get('name').touched)"
+                 class="invalid-feedback">
+                <div *ngIf="form.get('name').errors?.required">
+                  Name is required.
+                </div>
+                <div *ngIf="form.get('name').errors?.isDupeField">
+                  Name does already exist: please choose another.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="iso2">ISO 3166-1 ALPHA-2 Country Code (2 letters)</label>
+            <br />
+            <input type="text" id="iso2"
+                   formControlName="iso2" required
+                   placeholder="2 letters country code..."
+                   class="form-control" />
+
+            <div *ngIf="form.get('iso2').invalid &&
+                 (form.get('iso2').dirty || form.get('iso2').touched)"
+                 class="invalid-feedback">
+                <div *ngIf="form.get('iso2').errors?.required">
+                  ISO 3166-1 ALPHA-2 country code is required.
+                </div>
+                <div *ngIf="form.get('iso2').errors?.pattern">
+                  ISO 3166-1 ALPHA-2 country code requires 2 letters.
+                </div>
+                <div *ngIf="form.get('iso2').errors?.isDupeField">
+                  This ISO 3166-1 ALPHA-2 country code already exist: please choose another.
+                </div>
+            </div>
+        </div>
+
+              <div class="form-group">
+            <label for="iso3">ISO 3166-1 ALPHA-3 Country Code (3 letters)</label>
+            <br />
+            <input type="text" id="iso3"
+                   formControlName="iso3" required
+                   placeholder="3 letters country code..."
+                   class="form-control" />
+
+            <div *ngIf="form.get('iso3').invalid &&
+                 (form.get('iso3').dirty || form.get('iso3').touched)"
+                 class="invalid-feedback">
+                <div *ngIf="form.get('iso3').errors?.required">
+                  ISO 3166-1 ALPHA-3 country code is required.
+                </div>
+                <div *ngIf="form.get('iso3').errors?.pattern">
+                  ISO 3166-1 ALPHA-3 country code requires 3 letters.
+                </div>
+                <div *ngIf="form.get('iso3').errors?.isDupeField">
+                  This ISO 3166-1 ALPHA-3 country code already exist: please choose another.
+                </div>
+            </div>
+        </div>
+      
+        <div class="form-group commands">
+            <button *ngIf="id" type="submit"
+                    (click)="onSubmit()"
+                    [disabled]="form.invalid"
+                    class="btn btn-success">
+                Save
+            </button>
+            <button *ngIf="!id" type="submit"
+                    (click)="onSubmit()"
+                    [disabled]="form.invalid"
+                    class="btn btn-success">
+                Create
+            </button>
+            <button type="button"
+                    [routerLink]="['/countries']"
+                    class="btn btn-default">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>

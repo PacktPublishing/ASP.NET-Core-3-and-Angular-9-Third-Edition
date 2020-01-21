@@ -1,0 +1,23 @@
+﻿[Unit]
+Description=WorldCities
+
+[Service]
+WorkingDirectory=/var/www/WorldCities
+ExecStart=/usr/bin/dotnet /var/www/WorldCities/WorldCities.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=WorldCities
+User=nginx
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+Environment=ASPNETCORE_URLS=http://localhost:5000
+
+# How many seconds to wait for the app to shut down after it receives the initi$
+# If the app doesn't shut down in this period, SIGKILL is issued to terminate t$
+# The default timeout for most distributions is 90 seconds.
+TimeoutStopSec=90
+
+[Install]
+WantedBy=multi-user.target

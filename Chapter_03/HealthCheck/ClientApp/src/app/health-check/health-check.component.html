@@ -1,0 +1,24 @@
+<h1>Health Check</h1>
+
+<p>Here are the results of our health check:</p>
+
+<p *ngIf="!result"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="result">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Response Time</th>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let check of result.checks">
+      <td>{{ check.name }}</td>
+      <td>{{ check.responseTime }}</td>
+      <td class="status {{ check.status }}">{{ check.status }}</td>
+      <td>{{ check.description }}</td>
+    </tr>
+  </tbody>
+</table>
