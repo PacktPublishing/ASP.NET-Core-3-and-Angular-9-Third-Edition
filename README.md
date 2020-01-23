@@ -1,5 +1,4 @@
-# NETCore3-Angular9
-.NET Core 3 and Angular 9
+# ASP.NET Core 3 and Angular 9 - Third Edition
 
 This is the code repository for [ASP.NET Core 3 and Angular 9](https://www.packtpub.com/web-development/asp-net-core-3-and-angular-9-third-edition?utm_source=GitHub&utm_medium=repository), 
 published by [Packt](https://www.packtpub.com/?utm_source=GitHub&utm_medium=repository). It contains all the supporting project files necessary to work through the book from start to finish.
