@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 // import { HttpClient, HttpParams } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, Validators, AbstractControl, AsyncValidatorFn } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl, AsyncValidatorFn } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { BaseFormComponent } from '../base.form.component';
@@ -21,26 +21,7 @@ export class CountryEditComponent
   title: string;
 
   // the form model
-  form = this.fb.group({
-    name: ['',
-      Validators.required,
-      this.isDupeField("name")
-    ],
-    iso2: ['',
-      [
-        Validators.required,
-        Validators.pattern('[a-zA-Z]{2}')
-      ],
-      this.isDupeField("iso2")
-    ],
-    iso3: ['',
-      [
-        Validators.required,
-        Validators.pattern('[a-zA-Z]{3}')
-      ],
-      this.isDupeField("iso3")
-    ]
-  });
+  form: FormGroup;
 
   // the city object to edit or create
   country: Country;
@@ -59,6 +40,27 @@ export class CountryEditComponent
   }
 
   ngOnInit() {
+    this.form = this.fb.group({
+      name: ['',
+        Validators.required,
+        this.isDupeField("name")
+      ],
+      iso2: ['',
+        [
+          Validators.required,
+          Validators.pattern('[a-zA-Z]{2}')
+        ],
+        this.isDupeField("iso2")
+      ],
+      iso3: ['',
+        [
+          Validators.required,
+          Validators.pattern('[a-zA-Z]{3}')
+        ],
+        this.isDupeField("iso3")
+      ]
+    });
+
     this.loadData();
   }
 
