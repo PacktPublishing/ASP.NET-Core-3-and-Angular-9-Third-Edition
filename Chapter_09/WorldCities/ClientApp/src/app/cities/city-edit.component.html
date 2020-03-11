@@ -5,7 +5,7 @@
 
     <div class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-        <div *ngIf="form.invalid form.errors?.isDupeCity"
+        <div *ngIf="form.invalid && form.errors?.isDupeCity"
              class="alert alert-danger">
               <strong>ERROR</strong>:
               A city with the same <i>name</i>, <i>lat</i>,
