@@ -49,7 +49,7 @@ export class CityService
     }
 
     post<City>(item): Observable<City> {
-        var url = this.baseUrl + "api/Cities/" + item.id;
+        var url = this.baseUrl + "api/Cities/";
         return this.http.post<City>(url, item);
     }
 
