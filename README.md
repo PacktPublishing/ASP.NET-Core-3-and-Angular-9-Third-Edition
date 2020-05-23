@@ -4,9 +4,9 @@ This is the code repository for [ASP.NET Core 3 and Angular 9](https://www.packt
 published by [Packt](https://www.packtpub.com/?utm_source=GitHub&utm_medium=repository). It contains all the supporting project files necessary to work through the book from start to finish.
 
 ## IMPORTANT NOTE
-If you experience any issue while running the project's source code, please do the following:
+If you experience any issue while running the project while following the book's chapters, please do the following:
 - Get the updated project from GitHub and save it in a separate folder
-- Right-click to the `Chapter_01/HealthCheck` project and ***Set as StartUp Project***
+- Right-click to the project you want to run (for example `Chapter_01/HealthCheck`) and ***Set as StartUp Project***
 - Execute the `/ClientApp/update-npm.bat` file
 - Launch the project in debug mode
 In case it works, compare your code with the GitHub files to see what's wrong. Also be sure to check out the book's errata and other useful info regarding the source code from the [Issues page](https://github.com/PacktPublishing/ASP.NET-Core-3-and-Angular-9-Third-Edition/issues).
