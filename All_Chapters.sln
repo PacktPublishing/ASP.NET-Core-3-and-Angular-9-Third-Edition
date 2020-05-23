@@ -61,6 +61,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCheck", "Chapter_12\H
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCities", "Chapter_12\WorldCities\WorldCities.csproj", "{CC6B414C-356A-4D80-847F-478D2B32FC02}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root items", "Root items", "{687B1BB3-B260-40C1-B1B5-BD9D0DAF0A38}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

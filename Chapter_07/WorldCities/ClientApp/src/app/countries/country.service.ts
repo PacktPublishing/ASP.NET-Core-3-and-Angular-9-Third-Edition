@@ -51,7 +51,7 @@ export class CountryService
   }
 
   post<Country>(item): Observable<Country> {
-    var url = this.baseUrl + "api/countries/";
+    var url = this.baseUrl + "api/Countries";
     return this.http.post<Country>(url, item);
   }
 
