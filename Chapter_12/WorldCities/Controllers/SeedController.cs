@@ -74,7 +74,7 @@ namespace WorldCities.Controllers
                         var row = ws.Cells[nRow, 1, nRow, ws.Dimension.End.Column];
                         var name = row[nRow, 5].GetValue<string>();
 
-                        // Did we already created a country with that name?
+                        // does this country already exist?
                         if (lstCountries.Where(c => c.Name == name).Count() == 0)
                         {
                             // create the Country entity and fill it with xlsx data
@@ -120,7 +120,7 @@ namespace WorldCities.Controllers
                             .FirstOrDefault();
                         var countryId = country.Id;
 
-                        // Did we already created a country with that name?
+                        // does this city already exist?
                         if (lstCities.Where(
                             c => c.Name == name
                             && c.Lat == lat
