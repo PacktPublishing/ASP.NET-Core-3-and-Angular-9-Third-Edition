@@ -106,7 +106,7 @@ export class CountryEditComponent
 
           // go back to cities view
           this.router.navigate(['/countries']);
-        }, error => console.log(error));
+        }, error => console.error(error));
     }
     else {
       // ADD NEW mode
@@ -118,7 +118,7 @@ export class CountryEditComponent
 
           // go back to cities view
           this.router.navigate(['/countries']);
-        }, error => console.log(error));
+        }, error => console.error(error));
     }
   }
 

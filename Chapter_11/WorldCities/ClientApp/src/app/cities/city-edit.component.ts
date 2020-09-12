@@ -150,7 +150,7 @@ export class CityEditComponent
 
           // go back to cities view
           this.router.navigate(['/cities']);
-        }, error => console.log(error));
+        }, error => console.error(error));
     }
     else {
       // ADD NEW mode
@@ -162,7 +162,7 @@ export class CityEditComponent
 
           // go back to cities view
           this.router.navigate(['/cities']);
-        }, error => console.log(error));
+        }, error => console.error(error));
     }
   }
 
