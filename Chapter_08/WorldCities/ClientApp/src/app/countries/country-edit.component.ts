@@ -48,14 +48,14 @@ export class CountryEditComponent
       iso2: ['',
         [
           Validators.required,
-          Validators.pattern('[a-zA-Z]{2}')
+          Validators.pattern(/[a-zA-Z]{2}/)
         ],
         this.isDupeField("iso2")
       ],
       iso3: ['',
         [
           Validators.required,
-          Validators.pattern('[a-zA-Z]{3}')
+          Validators.pattern(/[a-zA-Z]{3}/)
         ],
         this.isDupeField("iso3")
       ]
