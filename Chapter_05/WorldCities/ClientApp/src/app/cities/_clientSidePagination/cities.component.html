@@ -1,0 +1,41 @@
+<h1>Cities</h1>
+
+<p>Here's a list of cities: feel free to play with it.</p>
+
+<p *ngIf="!cities"><em>Loading...</em></p>
+
+<table mat-table [dataSource]="cities" class="mat-elevation-z8"
+ [hidden]="!cities">
+  <!-- Id Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let city">{{city.id}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let city">{{city.name}}</td>
+  </ng-container>
+
+  <!-- Lat Column -->
+  <ng-container matColumnDef="lat">
+    <th mat-header-cell *matHeaderCellDef>Latitude</th>
+    <td mat-cell *matCellDef="let city">{{city.lat}}</td>
+  </ng-container>
+
+  <!-- Lon Column -->
+  <ng-container matColumnDef="lon">
+    <th mat-header-cell *matHeaderCellDef>Longitude</th>
+    <td mat-cell *matCellDef="let city">{{city.lon}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+﻿
+<!-- Pagination directive -->
+<mat-paginator [hidden]="!cities"
+    [pageSize]="10"
+    [pageSizeOptions]="[10, 20, 50]"
+    showFirstLastButtons></mat-paginator>
