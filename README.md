@@ -74,6 +74,13 @@ export class PageNotFoundComponent {
 }
 ```
 
+## Errata
+* Page 230: This Address bar value- https://localhost:44344/api/Cities/?pageIndex=0pageSize=10
+
+           _should be replaced with_
+
+           https://localhost:44344/api/Cities/?pageIndex=0&pageSize=10  
+
 
 ## About the Author
 Valerio De Sanctis is a skilled IT professional with more than 15 years of experience in lead programming, 
