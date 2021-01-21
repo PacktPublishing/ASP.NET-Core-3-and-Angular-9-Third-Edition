@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/asp-net-core-3-and-angular-9-third-edition/9781789612165)
------
-*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789612160).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # ASP.NET Core 3 and Angular 9 - Third Edition
 
 This is the code repository for [ASP.NET Core 3 and Angular 9](https://www.packtpub.com/web-development/asp-net-core-3-and-angular-9-third-edition?utm_source=GitHub&utm_medium=repository), 
