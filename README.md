@@ -112,3 +112,7 @@ You can reach him on [GitHub](https://github.com/Darkseal), [StackOverflow](http
 ## Related Products
 * [ASP.NET Core and Angular 2](https://www.packtpub.com/application-development/aspnet-core-and-angular-2?utm_source=GitHub&utm_medium=repository) (first edition)
 * [ASP.NET Core 2 and Angular 5](https://www.packtpub.com/application-development/aspnet-core-2-and-angular-5?utm_source=GitHub&utm_medium=repository) (second edition)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781789612165">https://packt.link/free-ebook/9781789612165 </a> </p>
